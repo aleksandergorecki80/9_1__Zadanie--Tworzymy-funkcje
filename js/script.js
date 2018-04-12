@@ -1,16 +1,24 @@
 var 
-	a = prompt('Podaj wartosc \'a\' '), 
-	b = prompt('Podaj wartosc \'b\' '), 
-	value = (a * a) - (2 * a * b) - (b * b);
+	triangle1Area,
+	triangle2Area,
+	triangle3Area; 
+ 
+
+function getTriangleArea (a, h){
 	
-	console.log(value);
-		
-	if (value > 0) {
-		console.log('wynik dodatni');
+var resoult = a > 0 && h>0 ? a*h/2 : 'Nieprawidłowe dane.';
+	
+/*	
+	if (a>0 && h>0){
+		return a*h/2;
 	}
-	else if (value < 0) {
-		console.log('wynik ujemny');
+	else{
+		console.log('Nieprawidłowe dane');
 	}
-	else {
-		console.log('wynik rowny zero');
-	}
+*/
+	
+	return resoult;
+}
+
+
+console.log(getTriangleArea (10, 20));
